@@ -19,4 +19,10 @@ public class RoutingAndFilteringBookApplicationTests {
 		String resp = rest.getForObject("/available", String.class);
 		assertThat(resp).isEqualTo("Spring in Action");
 	}
+
+	@Test
+	public void checkedOutTest() {
+		String resp = rest.getForObject("/checked-out", String.class);
+		assertThat(resp).isEqualTo("Spring Boot in Action");
+	}
 }
